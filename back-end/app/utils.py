@@ -1,0 +1,1 @@
+# Các hàm tiện ích chung có thể được tái sử dụng trong nhiều nơi trong ứng dụng (ví dụ, hàm xử lý mã hóa mật khẩu, gửi email, v.v.).
