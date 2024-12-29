@@ -1,0 +1,103 @@
+.info-form {
+    overflow-y: auto;
+    max-height: 650px;
+    padding: 20px;
+    width: 1000px;
+}
+.info-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 10px 0;
+
+    .user-info {
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .content-avatar {
+        margin: auto;
+        position: relative;
+        .input-url {
+            display: none;
+        }
+
+        .upload-btn {
+            position: absolute;
+            bottom: 0px;
+            right: 15px;
+            background-color: #ffffff;
+            cursor: pointer;
+            padding: 8px 12px;
+            color: #fff;
+            border-radius: 50%;
+            border: 1px solid #cccccc;
+            transition: background-color 0.3s ease;
+        }
+        .avatar-frame {
+            width: 250px;
+            height: 140px;
+            border-radius: 16px;
+            border: 2px solid #ccc;
+            object-fit: cover;
+        }
+    }
+
+    .content-info {
+        flex-grow: 1;
+
+        .content-info-setting {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            .content-info-full {
+                flex: 1 1 100%; /* Mỗi hàng chiếm đủ chiều rộng */
+                display: flex;
+                flex-direction: column;
+
+                .user-label {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                    span {
+                        color: red;
+                    }
+                }
+
+                .input-field {
+                    padding: 10px 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    font-size: 1.3rem;
+                    outline: none;
+
+                    &:focus-within {
+                        border-color: #d5d5d5;
+                        box-shadow: 0 0 4px rgba(221, 221, 221, 0.867);
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-submit {
+    margin-top: 24px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.content-info-full-la {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}

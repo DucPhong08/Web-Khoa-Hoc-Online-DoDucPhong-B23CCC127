@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    padding: 0 var(--default-layout-horizontal-spacer);
+    margin-top: var(--default-layout-header-height);
+    display: flex;
+    min-height: fit-content;
+}
+.content {
+    flex: 1;
+    min-height: 100vh;
+}

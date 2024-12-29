@@ -1,0 +1,124 @@
+/* styles.css */
+
+.course-list {
+    padding: 20px;
+    font-family: var(--font-family);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+
+    th {
+        padding-bottom: 12px;
+        font-size: 18px;
+        border-bottom: 1px solid #000000;
+    }
+
+    td {
+        padding: 16px 0;
+        font-size: 15px;
+        border-bottom: 1px solid #000000;
+        overflow: hidden;
+        width: 200px;
+
+        &:first-child {
+            gap: 12px;
+            border-left: 1px solid #333;
+
+            img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &:last-child {
+            border-right: 1px solid #333;
+        }
+    }
+
+    tbody tr:hover {
+        background: #eee;
+    }
+}
+.detail-table {
+    table {
+        width: 90%;
+        margin: auto;
+        user-select: none;
+    }
+    th {
+        padding-bottom: 12px;
+        font-size: 18px;
+    }
+
+    td {
+        padding: 16px 0;
+        font-size: 15px;
+        border: none;
+        height: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:first-child {
+            gap: 12px;
+            padding-left: 6px;
+            border-left: none;
+
+            img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    tbody tr:hover {
+        background: #eee;
+    }
+}
+
+.pd-0 {
+    min-width: 0;
+    + .pd-0 {
+        margin-left: 8px;
+    }
+}
+.ad {
+    border-color: red;
+    color: red;
+}
+.fix {
+    border-color: rgb(145, 133, 81);
+    color: rgb(145, 133, 81);
+}
+.ads {
+    margin-top: 5px;
+}
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+        border-color: #007bff;
+    }
+
+    &::placeholder {
+        color: #888;
+        font-style: italic;
+    }
+}

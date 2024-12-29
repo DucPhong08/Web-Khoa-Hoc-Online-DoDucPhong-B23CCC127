@@ -1,0 +1,60 @@
+.wrapper {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+}
+.info-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    .user-info {
+        font-weight: 700;
+        font-size: large;
+    }
+}
+
+/* Container bọc input và button */
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    border-radius: 0.8rem;
+    border: 1.5px solid rgb(206, 212, 218);
+    position: relative;
+    height: 4.2rem;
+    margin: 0.6rem auto;
+    input {
+        font-family: var(--font-family);
+        height: 100%;
+        width: 100%;
+        flex: 1;
+        color: var(--black);
+        font-size: 1.6rem;
+        background-color: transparent;
+        padding: 9px 10px;
+    }
+    &:focus-within {
+        border-color: rgba(13, 44, 218, 0.2);
+    }
+}
+.hidden__appear-btn {
+    min-width: 0;
+    color: rgba(22, 24, 35, 0.34);
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.label-input {
+    color: rgb(19, 19, 19);
+    min-width: 160px;
+
+    > span {
+        color: rgb(250 82 82 / var(--tw-text-opacity));
+    }
+}
+
+.btn-confirm {
+    width: 10%;
+    display: flex;
+    margin-left: auto;
+    margin-top: 1.6rem;
+}

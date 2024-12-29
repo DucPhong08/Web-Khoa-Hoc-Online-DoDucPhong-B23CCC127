@@ -1,0 +1,97 @@
+.profile-container {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+}
+.info-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    .user-info {
+        font-weight: 700;
+        font-size: large;
+    }
+}
+.content {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1.25rem;
+    overflow: hidden;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    width: 100%;
+}
+.user-input {
+    margin-top: 15px;
+    font-family: Muli, 'Open Sans', sans-serif;
+    height: auto;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    appearance: none;
+    resize: none;
+    font-size: 1.125rem;
+    color: rgb(24, 37, 55);
+    display: block;
+    text-align: left;
+    border: 0.05rem solid rgb(206, 212, 218);
+    background-color: rgb(255, 255, 255);
+    transition: border-color 100ms;
+    min-height: 3.125rem;
+    padding: 0.625rem calc(1.04167rem);
+    border-radius: 0.25rem;
+}
+.content-avatar {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .avatar-frame {
+        width: 100px; /* Đặt chiều rộng cho avatar */
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: inline-flex;
+    }
+
+    .icon-frame {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        margin-right: 40px;
+    }
+}
+
+.content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .content-info-setting {
+        font-size: 1rem;
+        line-height: 20px;
+        overflow-wrap: break-word;
+        .container > * + * {
+            margin-top: 1rem;
+        }
+
+        .content-info-full {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5rem;
+            margin-top: 16px;
+        }
+    }
+}
+
+.user-label {
+    color: rgb(137 137 137 / var(--tw-text-opacity));
+    min-width: 160px;
+
+    > span {
+        color: rgb(250 82 82 / var(--tw-text-opacity));
+    }
+}
+.user-content {
+    font-weight: 700;
+}

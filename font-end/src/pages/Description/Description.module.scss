@@ -1,0 +1,151 @@
+.course-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/anh-mau-xanh-duong.jpg') no-repeat
+        center center/cover;
+    padding: 20px;
+    width: 100%;
+    height: 55rem;
+    gap: 2rem;
+}
+
+.course-info {
+    max-width: 60%;
+    margin: 12rem 0 0 3rem;
+}
+
+.course-title {
+    font-size: 4rem;
+    color: #e6e6e6;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.course-description {
+    font-size: 2rem;
+    color: #e6e6e6;
+    line-height: 1.6;
+    margin-top: 2.3rem;
+}
+
+.course-instructor {
+    font-size: 1.8rem;
+    color: #e6e6e6;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    font-weight: normal;
+    span {
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+}
+// description
+.description-floating {
+    position: fixed;
+    top: 12rem;
+    right: 4rem;
+    width: 40rem;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.description-image {
+    width: auto;
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+}
+
+.description-info {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+
+    .price-section {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.3rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.3rem;
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+        svg {
+            color: #c3c7c9;
+            font-size: 1.5rem;
+        }
+    }
+    .btn-study {
+        display: flex;
+        margin-right: 1.3rem;
+        transition: background-color 0.3s ease;
+        gap: 5px;
+    }
+}
+
+/* Danh sách các tab */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12rem;
+
+    .tabs-header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #eff1f5;
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        width: calc(var(---default-layout-width) - 32rem);
+
+        .tab-button {
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            background-color: #eff1f5;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 20rem;
+            font-weight: 600;
+            color: #677186;
+            transition: all 0.3s ease;
+
+            &.active {
+                color: #000;
+                background-color: #fff;
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+}
+.tab-content {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    width: calc(var(---default-layout-width) - 26rem);
+}

@@ -1,0 +1,109 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button: 55px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--default-layout-header-height);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.inner {
+    height: 100%;
+    width: var(---default-layout-width);
+    padding: 0 var(--default-layout-horizontal-spacer);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+// Action
+.actions {
+    display: flex;
+    align-items: center;
+}
+.action-btn {
+    position: relative;
+    display: flex;
+    font-size: 2.2rem;
+    color: #161823;
+    background-color: transparent;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: var(--font-family);
+    background-color: var(--primary);
+}
+.notification {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 40px;
+    right: 0;
+    margin-right: 150px;
+    width: 400px;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 12px;
+}
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.ring {
+    animation: ring 0.5s ease-in-out infinite;
+}

@@ -1,0 +1,106 @@
+.create-course {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    padding: 20px;
+
+    h2 {
+        font-size: 32px;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+        width: 100%;
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea,
+        select,
+        option {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-url {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: none;
+        }
+        textarea {
+            resize: vertical;
+        }
+
+        .upload-btn {
+            width: 10%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-left: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #bebebe8b;
+                color: #333;
+                border-color: #ccc;
+            }
+        }
+        .image-preview {
+            height: 200px;
+            width: 400px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .form-group {
+            width: 48%;
+        }
+    }
+
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: var(--white);
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}

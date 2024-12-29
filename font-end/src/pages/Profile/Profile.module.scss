@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white);
+}
+.wrapper {
+    display: flex;
+    gap: 2.5rem;
+}
+.sidebar {
+    width: 30rem;
+}
+.content {
+    color: var(--black);
+}

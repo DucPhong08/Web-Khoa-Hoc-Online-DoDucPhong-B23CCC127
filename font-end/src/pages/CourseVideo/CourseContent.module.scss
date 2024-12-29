@@ -1,0 +1,129 @@
+// Container chính
+.course-container {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    height: fit-content;
+    padding: 20px;
+}
+
+// Tiêu đề khóa học
+.course-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+// Wrapper cho video và sidebar
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+// Video Player
+.video-player {
+    flex: 2;
+    background-color: #1b263b;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+
+    .video-player-class {
+        width: 100%;
+        height: 360px;
+        border-radius: 8px;
+        border: none;
+    }
+
+    h3 {
+        margin-top: 10px;
+    }
+}
+
+// Sidebar
+.sidebar {
+    flex: 1;
+    background-color: #1b263b;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+// Tab
+.content {
+    display: flex;
+    width: var(---default-layout-width);
+    margin: auto;
+}
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+
+    .tabs-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #eff1f5;
+        margin: 2rem auto;
+        padding: 1rem;
+        border-radius: 2rem;
+        width: 70%;
+
+        .tab-button {
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            background-color: #eff1f5;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 20rem;
+            font-weight: 600;
+            color: #677186;
+            transition: all 0.3s ease;
+
+            &.active {
+                color: #000;
+                background-color: #fff;
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+
+    .tabs-content {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        flex: 2;
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 50x;
+            color: #222;
+        }
+
+        p {
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: larger;
+        }
+    }
+
+    .suggest-content {
+        padding: 20px;
+        h1 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+    }
+}

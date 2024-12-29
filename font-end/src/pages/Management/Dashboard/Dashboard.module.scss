@@ -1,0 +1,213 @@
+.head-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #342e37;
+    }
+
+    .btn-download {
+        height: 36px;
+        padding: 0 16px;
+        border-radius: 36px;
+        background: #3c91e6;
+        color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+    }
+}
+
+.box-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+
+    li {
+        padding: 24px;
+        background: #f9f9f9;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .bx {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            font-size: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:nth-child(1) .bx {
+            background: #cfe8ff;
+            color: #3c91e6;
+        }
+
+        &:nth-child(2) .bx {
+            background: #fff2c6;
+            color: #ffce26;
+        }
+
+        &:nth-child(3) .bx {
+            background: #ffe0d3;
+            color: #fd7238;
+        }
+
+        &:nth-child(4) .bx {
+            background: #ffe0d3;
+            color: #853e20;
+        }
+        .text {
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                color: #342e37;
+            }
+
+            p {
+                color: #342e37;
+            }
+        }
+    }
+}
+
+.table-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: #342e37;
+
+    > div {
+        border-radius: 20px;
+        background: #f9f9f9;
+        padding: 24px;
+        overflow-x: auto;
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+
+            h3 {
+                margin-right: auto;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .bx {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .order {
+        flex-grow: 1;
+        flex-basis: 500px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: none;
+            thead {
+                background-color: transparent;
+            }
+
+            th {
+                padding-bottom: 12px;
+                font-size: 13px;
+                border-bottom: 1px solid #000000;
+                border: none;
+            }
+
+            td {
+                padding: 16px 0;
+                border: none;
+
+                &:first-child {
+                    gap: 12px;
+                    padding-left: 6px;
+
+                    img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                .status {
+                    font-size: 16px;
+                    padding: 6px 16px;
+                    border-radius: 20px;
+                    font-weight: 700;
+
+                    .completed {
+                        background: #3c91e6;
+                        border-radius: 10px;
+                        padding: 6px 16px;
+                    }
+
+                    .pending {
+                        background: #fd7238;
+                        border-radius: 10px;
+                        padding: 6px 16px;
+                    }
+                }
+            }
+
+            tbody tr:hover {
+                background: #eee;
+            }
+        }
+    }
+
+    .todo {
+        flex-grow: 1;
+        flex-basis: 300px;
+
+        .todo-list {
+            width: 100%;
+
+            li {
+                width: 100%;
+                margin-bottom: 16px;
+                background: #eee;
+                border-radius: 10px;
+                padding: 14px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &.completed {
+                    border-left: 10px solid #3c91e6;
+                }
+
+                &.not-completed {
+                    border-left: 10px solid #fd7238;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .bx {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

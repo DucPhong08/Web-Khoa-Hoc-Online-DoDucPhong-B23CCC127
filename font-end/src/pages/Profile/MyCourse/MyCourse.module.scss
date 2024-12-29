@@ -1,0 +1,22 @@
+.wrapper {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+}
+.my-course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
+.my-course-content {
+    display: flex;
+    gap: 20px;
+
+    .my-course-img {
+        width: 220px;
+        height: 140px;
+        border-radius: 16px;
+        object-fit: cover;
+    }
+}

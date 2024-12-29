@@ -1,0 +1,163 @@
+.cart-container {
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 12px;
+
+    .title {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+
+    .cart-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .cart-item-list {
+            display: flex;
+            gap: 15px;
+            .cart-items {
+                display: flex;
+                flex-direction: column;
+
+                .cart-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 25px 15px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    margin-top: 16px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s, box-shadow 0.3s;
+
+                    &:hover {
+                        transform: scale(1.02);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .checkbox {
+                        cursor: pointer;
+                        transform: scale(1.2);
+                    }
+
+                    .cart-item-image {
+                        width: 220px;
+                        height: 120px;
+                        border-radius: 12px;
+                        object-fit: cover;
+                        animation: imagePop 0.3s ease-in-out;
+                    }
+
+                    .cart-info {
+                        flex-grow: 1;
+
+                        .cart-item-title {
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin: 0;
+                            color: #333;
+                        }
+
+                        .cart-item-author {
+                            color: #777;
+                            font-size: 14px;
+                            margin: 5px 0;
+                        }
+
+                        .cart-item-details {
+                            font-size: 14px;
+                            color: #aaa;
+                        }
+                    }
+
+                    .cart-item-price {
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #ff9900;
+                    }
+
+                    .remove-btn {
+                        background: transparent;
+                        border: none;
+                        color: #ff4d4f;
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: transform 0.2s, color 0.2s;
+
+                        &:hover {
+                            color: #e63946;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+        .shop-cart {
+            .cart-pay {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                padding: 15px;
+                width: 400px;
+            }
+        }
+
+        .summary-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            background: linear-gradient(to right, #ff9900, #ff7a00);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s, transform 0.3s;
+
+            &:hover {
+                background: linear-gradient(to right, #ff7a00, #ff5500);
+                transform: translateY(-3px);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+
+        .empty-cart {
+            font-size: 20px;
+            text-align: center;
+            color: #aaa;
+        }
+    }
+}
+
+@keyframes imagePop {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
