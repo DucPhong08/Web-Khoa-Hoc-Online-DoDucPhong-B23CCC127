@@ -1,8 +1,27 @@
 from flask import Flask
-from .routes import main_routes, auth_routes
+from app.config import Config
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager
+from datetime import timedelta
+from app.routes import blueprints
+from app.extensions import connected
 
-app = Flask(__name__)
-app.config.from_object('app.config.Config')  # Nơi chứa cấu hình ứng dụng
 
-app.register_blueprint(main_routes.bp)
-app.register_blueprint(auth_routes.bp, url_prefix='/auth')
+
+def create_app():
+    app = Flask(__name__)
+    CORS(app) 
+    # nạp cấu hình mongo
+    app.config.from_object(Config)
+
+    jwt = JWTManager(app)
+    
+    # kết nối mongo
+    connected(app)  
+    for bp, prefix in blueprints:
+        app.register_blueprint(bp, url_prefix=f"/api/{prefix}")
+    
+    # Thiết lập thời gian hết hạn của Access Token là 1 giờ   
+    app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)
+        
+    return app

@@ -1,1 +1,0 @@
-Thư mục c   hứa các tệp migration để quản lý các thay đổi trong database schema, sử dụng Flask-Migrate.

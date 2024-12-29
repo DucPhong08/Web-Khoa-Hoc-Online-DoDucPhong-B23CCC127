@@ -1,6 +1,34 @@
-from app import db
+from mongoengine import ( 
+    Document,
+    StringField,
+    DateTimeField,BooleanField
+)
+from datetime import datetime
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(120), nullable=False)
+
+
+
+class User(Document):
+    name = StringField(default = "User-Web",unique=True)
+    email = StringField(required=True, unique=True)
+    password = StringField(required=True)
+    role = StringField(choices=["admin", "teacher", "student"], required=True)
+    look = BooleanField(default=False)
+    image = StringField(default="")
+    created_at = DateTimeField(default=datetime.now)
+    updated_at = DateTimeField(default=datetime.now)
+
+    def save(self, *args, **kwargs):
+        self.updated_at = datetime.now()
+        user = super(User, self).save(*args, **kwargs)
+        if self.role == "student":
+            from app.models import UserInfo
+
+            if not UserInfo.objects(user=self).first():  # pylint: disable=E1101
+                student = UserInfo(user=self)
+                student.save()
+        return user
+
+    meta = {
+        "collection": "User",
+    }
